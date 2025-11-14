@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 26 19:20:52 2022
+
+@author: SyedRaheeb
+"""
+
+{% extends "base.html" %}
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h4 class="mt-3 mb-4">Upload an image and click submit</h4>
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <div class="custom-file mb-3">
+                    <input type="file" class="custom-file-input" id="imageUpload" name="file" accept=".png,.jpg,.jpeg">
+                    <label class="custom-file-label" for="imageUpload">Choose file</label>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" id="btn-predict">Predict</button>
+            </form>
+
+            <div class="mt-4" id="result" style="display:none;">
+                <h5>Diagnosis for the uploaded image:</h5>
+                <span id="diagnosis" class="font-weight-bold"></span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
